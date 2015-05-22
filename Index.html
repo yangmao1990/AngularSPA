@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Angular Routes</title>
+    <script src="app/Libs/angular.min.js"></script>
+    <script src="app/Libs/angular-route.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/customerController.js"></script>
+
+    <style>
+        #header {
+            height:200px;
+            background-color:#c7e8ed;
+        }
+        #header h1 {
+                text-align:center;
+        }
+
+        .top-nav {
+            float:right;
+        }
+
+            .top-nav ul li {
+                display:inline;
+            }
+
+        #content {
+            min-height:400px;
+            background-color:#f4f4f6;
+        }
+
+        #footer {
+            text-align:center;
+            font-weight:bold;
+            background-color:#fbf57b;
+        }
+    </style>
+
+</head>
+<body>
+    <section id="header">
+        <h2>Angular Routes</h2>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/contacts">Contact Us</a></li>
+                <li><a href="#/customers">Customer</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="content">
+        <h3>Main goes here......</h3>
+
+        <div ng-view>
+
+        </div>
+
+    </section>
+
+    <section id="footer">
+        &copy;Marlabs-2015
+    </section>
+</body>
+</html>
